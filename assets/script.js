@@ -1,14 +1,57 @@
-var win = document.querySelector(".win");
-var lose = document.querySelector(".lose");
+var correct = document.querySelector(".correct");
+var incorrect = document.querySelector(".incorrect");
 var timerElement = document.querySelector(".timer-count");
 var startButton = document.querySelector(".start-button");
 
 
-var winCounter = 0;
-var loseCounter = 0;
-var isWin = false;
+var correctAns = 0;
+var incorrectAns = 0;
+var isCorrect = false;
 var timer;
+var timerCount;
 var countdown;
+
+var quizQuestions = [
+    {
+        question1: "What is the correct way to write a Javascript array?",
+        answers: {
+            a: "var colors = ["red", "green", "blue"]",
+            b: "var colors = (1:"red", 2:"green", 3:"blue")",
+            c: "var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")",
+            d: "var colors = "red", "green", "blue"",
+
+        },
+        correctAnswer = "a"
+    },
+    {
+        question2: "How do you declare a Javascript variable?",
+        answers: {
+            a: "var thisAnswer",
+            b: "v thisAnswer",
+            c: "variable thisAnswer",
+            d: "variable=thisAnswer",
+
+        },
+        correctAnswer = "a"
+    },
+    {
+        question3: "What will the following code return: Boolean(10 > 9)",
+        answers: {
+            a: "true",
+            b: "false",
+            c: "NaN",
+            d: "tralse",
+        },
+    }
+]
+
+
+startButton.addEventListener("click"), function(){
+
+
+}
+
+
 
 //Answering Questions
     //Click start button and timer appears with first question
