@@ -13,12 +13,12 @@ var countdown;
 
 var quizQuestions = [
     {
-        question1: "What is the correct way to write a Javascript array?",
+        question1: "Which event occurs when the user clicks on an HTML element?",
         answers: {
-            a: "var colors = ["red", "green", "blue"]",
-            b: "var colors = (1:"red", 2:"green", 3:"blue")",
-            c: "var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")",
-            d: "var colors = "red", "green", "blue"",
+            a: "onClick",
+            b: "onmouseclick",
+            c: "onmouseover",
+            d: "onchange",
 
         },
         correctAnswer = "a"
@@ -42,13 +42,15 @@ var quizQuestions = [
             c: "NaN",
             d: "tralse",
         },
+        correctAnswer: "a"
     }
 ]
 
 
-startButton.addEventListener("click"), function(){
+startButton.addEventListener("click", beginQuiz)
 
-
+function beginQuiz() {
+    
 }
 
 

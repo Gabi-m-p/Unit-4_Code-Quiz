@@ -3,3 +3,18 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
+
+.hidden {
+    display: none;
+}
+
+
+.choice {
+ 
+}
+
+#start-button:hover {
+    background-color: lightblue;
+    color: white
+    ;
+}

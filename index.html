@@ -9,25 +9,20 @@
     <header>
         
     <h1>Coding Quiz!</h1>
-    <button>Start</button>
+    <button id="start-button">Start</button>
     </header>
+    
+    <div class= "timer"></div>
+    <div class= "highscore"></div>
 
     <main>
-        <section>
-            <h2>Question 1</h2>
-            <div>What is the correct way to write a Javascript array?</div>
-        </section>
-
-        <section>
-            <h2>Question 2</h2>
-                <div>How do you declare a Javascript variable?</div>
-        
-        </section>
-
-        <section>
-            <h2>Question 3</h2>
-                <div>What will the following code return: Boolean(10 > 9)</div>
-            
+        <section id= "questionscontainer" class="hidden">
+            <div id= "userchoices"></div>
+            <button class= "choice">a</button>
+            <button class= "choice">b</button>
+            <button class= "choice">c</button>
+            <button class= "choice">d</button>
+         
         </section>
     </main>
     <script src="assets/script.js"></script>
