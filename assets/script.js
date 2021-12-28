@@ -1,20 +1,16 @@
-var correct = document.querySelector(".correct");
-var incorrect = document.querySelector(".incorrect");
-var timerElement = document.querySelector(".timer-count");
+
 var startButton = document.getElementById("start-button");
-var questionsContainer = document.getElementById("questionscontainer");
+var questionsContainer = document.getElementById("question");
+var resultsContainer = document.getElementById("results");
+var answerContainer = document.getElementById("answer");
 
-
-var correctAns = 0;
-var incorrectAns = 0;
-var isCorrect = false;
 var timer;
 var timerCount;
-var countdown;
+var questionIndex = 0;
 
 var quizQuestions = [
     {
-        question1: "Which event occurs when the user clicks on an HTML element?",
+        question: "Which event occurs when the user clicks on an HTML element?",
         answers: {
             a: "onClick",
             b: "onmouseclick",
@@ -25,7 +21,7 @@ var quizQuestions = [
         correctAnswer: "a"
     },
     {
-        question2: "How do you declare a Javascript variable?",
+        question: "How do you declare a Javascript variable?",
         answers: {
             a: "var thisAnswer",
             b: "v thisAnswer",
@@ -36,7 +32,7 @@ var quizQuestions = [
         correctAnswer: "a"
     },
     {
-        question3: "What will the following code return: Boolean(10 > 9)",
+        question: "What will the following code return: Boolean(10 > 9)",
         answers: {
             a: "true",
             b: "false",
@@ -51,14 +47,17 @@ var quizQuestions = [
 
 function beginQuiz() {
     console.log("begin quiz");
-    giveQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)]
-    for (var i=0; i < quizQuestions.length; i++);
     startButton.classList.add('hidden');
-    questionsContainer.classList.remove('hidden');
-    
+    timerCount = 30;
+    startTimer()
+
 }
 
-function giveQuestion(){
+
+function giveQuestion() {
+    console.log ("questions")
+ 
+    quest.textContent = question[questionIndex].question
 
 }
 
