@@ -1,7 +1,8 @@
 var correct = document.querySelector(".correct");
 var incorrect = document.querySelector(".incorrect");
 var timerElement = document.querySelector(".timer-count");
-var startButton = document.querySelector(".start-button");
+var startButton = document.getElementById("start-button");
+var questionsContainer = document.getElementById("questionscontainer");
 
 
 var correctAns = 0;
@@ -21,7 +22,7 @@ var quizQuestions = [
             d: "onchange",
 
         },
-        correctAnswer = "a"
+        correctAnswer: "a"
     },
     {
         question2: "How do you declare a Javascript variable?",
@@ -32,7 +33,7 @@ var quizQuestions = [
             d: "variable=thisAnswer",
 
         },
-        correctAnswer = "a"
+        correctAnswer: "a"
     },
     {
         question3: "What will the following code return: Boolean(10 > 9)",
@@ -47,14 +48,25 @@ var quizQuestions = [
 ]
 
 
-startButton.addEventListener("click", beginQuiz)
 
 function beginQuiz() {
+    console.log("begin quiz");
+    giveQuestion = quizQuestions[Math.floor(Math.random() * quizQuestions.length)]
+    for (var i=0; i < quizQuestions.length; i++);
+    startButton.classList.add('hidden');
+    questionsContainer.classList.remove('hidden');
     
 }
 
+function giveQuestion(){
 
+}
 
+function selectAnswer() {
+
+}
+
+startButton.addEventListener("click", beginQuiz);
 //Answering Questions
     //Click start button and timer appears with first question
         //First Question 

@@ -15,6 +15,6 @@
 
 #start-button:hover {
     background-color: lightblue;
-    color: white
-    ;
+    color: black;
+    border-radius: 3px;
 }
