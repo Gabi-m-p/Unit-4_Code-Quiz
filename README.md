@@ -10,3 +10,8 @@
 
 # Installation
 ## If the application is deployed properly it can be accessed here:
+https://gabi-m-p.github.io/Unit-4_Code-Quiz/
+
+## The repository can be located here:
+https://github.com/Gabi-m-p/Unit-4_Code-Quiz
+
