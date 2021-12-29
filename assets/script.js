@@ -3,6 +3,7 @@ var startButton = document.getElementById("start-button");
 var questionsContainer = document.getElementById("question");
 var resultsContainer = document.getElementById("results");
 var answerContainer = document.getElementById("answer");
+var buttonContainer = document.getElementById ("button");
 
 var timer;
 var timerCount;
@@ -49,23 +50,48 @@ function beginQuiz() {
     console.log("begin quiz");
     startButton.classList.add('hidden');
     timerCount = 30;
-    startTimer()
-
+    startTimer();
+    giveQuestion ();
 }
+var button = document.createElement ('button')
 
-
+    
 function giveQuestion() {
     console.log ("questions")
  
-    quest.textContent = question[questionIndex].question
+    questionsContainer.innerText = quizQuestion[questionIndex].question
+    questionsContainer.classList.remove('hidden');
+    button.innerText = answer.text
+    button.classList.add ('anotherbutton')
+    if (answer.correctAnswer) {
+        button.dataset.correct=answer.correct
+        button.addEventListener ('click, chooseAnswer')
+    }
+}
+
+function chooseAnswer() {
 
 }
 
-function selectAnswer() {
+function startTimer() {
 
-}
+    timer = setInterval(function() {
+        timerCount--;
+            timerCount.textContent = timerCount;
+            if (timerCount >= 0) {
+                clearInterval(timer);
+                winQuiz();
+               }
+          console.log("timer");
+            
+        }
+    
+
+    )}
 
 startButton.addEventListener("click", beginQuiz);
+
+init();
 //Answering Questions
     //Click start button and timer appears with first question
         //First Question 
